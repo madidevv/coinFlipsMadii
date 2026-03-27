@@ -1,0 +1,160 @@
+/* Основные стили для всей страницы (без изменений) */
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    color: #333;
+}
+
+/* Стили для главного контейнера (игры) (без изменений) */
+.game-card {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 40px;
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0,0,0,0.2);
+    text-align: center;
+    width: 350px;
+    transition: transform 0.3s ease;
+}
+
+.game-card:hover {
+    transform: translateY(-5px);
+}
+
+h1 {
+    font-size: 24px;
+    margin-bottom: 10px;
+    color: #4a148c;
+}
+
+h3 {
+    font-size: 16px;
+    font-weight: normal;
+    color: #666;
+    margin-bottom: 30px;
+}
+
+/* Контейнер для кнопок выбора (без изменений) */
+.choice-section {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 30px;
+}
+
+/* Стили для кнопок Орел/Решка (без изменений) */
+.btn-choice {
+    background: white;
+    border: 2px solid #ddd;
+    border-radius: 15px;
+    padding: 20px;
+    width: 120px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-choice:hover {
+    border-color: #764ba2;
+    background-color: #f3e5f5;
+    transform: scale(1.05);
+}
+
+.btn-choice:active {
+    transform: scale(0.98);
+}
+
+/* --- НОВЫЕ СТИЛИ ДЛЯ ИКОНОК-ЗАМЕНИТЕЛЕЙ --- */
+.coin-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%; /* Делаем круг */
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin-bottom: 15px; /* Отступ до подписи */
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+/* Разные фоны для Орла и Решки */
+.eagle-bg {
+    background: linear-gradient(135deg, #a1887f, #795548); /* Коричневый градиент */
+}
+
+.coin-bg {
+    background: linear-gradient(135deg, #ffca28, #f57c00); /* Желто-оранжевый градиент */
+}
+/* ------------------------------------------- */
+
+.label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #555;
+}
+
+/* Стили для блока результата (без изменений) */
+.result-section {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    margin-bottom: 20px;
+    min-height: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #eee;
+}
+
+#result {
+    font-size: 16px;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Разные цвета для статусов результата (без изменений) */
+.status-win { color: #2e7d32 !important; }
+.status-lose { color: #c62828 !important; }
+.status-pending { color: #1976d2 !important; }
+
+/* Кнопка "Узнать результат" (без изменений) */
+.btn-refresh {
+    background: #28a745;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.2s ease;
+    width: 100%;
+}
+
+.btn-refresh:hover {
+    background: #218838;
+}
+
+/* Анимация вращения для статуса загрузки (без изменений) */
+.spinner {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border: 3px solid rgba(0,123,255,.3);
+    border-radius: 50%;
+    border-top-color: #007bff;
+    animation: spin 1s ease-in-out infinite;
+    margin-right: 10px;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
