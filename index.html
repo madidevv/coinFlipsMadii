@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Web3 Coin Flip Game</title>
+
+    <script src="https://unpkg.com/ethers@6.7.0/dist/ethers.umd.min.js"></script>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="game-card">
+        <h1>Web3 Coin Flip</h1>
+        <h3>Сделай ставку и испытай удачу!</h3>
+        
+        <div class="choice-section">
+            <button class="btn-choice" onclick="play(0)">
+                <div class="coin-icon eagle-bg">О</div>
+                <span class="label">Орел</span>
+            </button>
+            <button class="btn-choice" onclick="play(1)">
+                <div class="coin-icon coin-bg">Р</div>
+                <span class="label">Решка</span>
+            </button>
+        </div>
+
+        <div class="result-section">
+            <div id="result">Загрузка приложения...</div>
+        </div>
+        
+        <button onclick="getGamePlayed()" class="btn-refresh">🔄 Узнать результат</button>
+    </div>
+
+    <script src="main.js"></script>
+</body>
+</html>
